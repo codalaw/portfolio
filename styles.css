@@ -135,6 +135,15 @@ h2 {
     letter-spacing: -0.04em;
 }
 
+h1 {
+    margin: 0 0 28px;
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+h1 span {
+    color: var(--accent);
+}
+
 h2 {
     margin: 0 0 28px;
     font-size: clamp(2rem, 4vw, 2.75rem);
@@ -164,20 +173,10 @@ p {
     grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
     align-items: center;
     gap: 64px;
-    padding-block: 80px;
 }
 
 .intro-content {
     min-width: 0;
-}
-
-h1 {
-    margin: 0 0 28px;
-    font-size: clamp(3rem, 6vw, 5rem);
-}
-
-h1 span {
-    color: var(--accent);
 }
 
 .intro-description {
@@ -254,7 +253,6 @@ h1 span {
     background-color: var(--surface);
     border: 1px solid #52758c;
     border-radius: 10px;
-    text-align: left;
 }
 
 .code-card-header {
@@ -299,10 +297,6 @@ h1 span {
     font-family: Consolas, "Courier New", monospace;
 }
 
-.code-comment {
-    color: #45c987;
-}
-
 .code-keyword {
     color: #40c9ff;
 }
@@ -343,6 +337,7 @@ h1 span {
 }
 
 .project-card {
+    min-width: 0;
     max-width: 540px;
     overflow: hidden;
     background-color: var(--surface);
@@ -350,39 +345,26 @@ h1 span {
     border-radius: 12px;
 }
 
-.project-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 220px;
-    padding: 32px;
-    background-color: #153b3c;
+.project-preview {
+    display: block;
+    overflow: hidden;
     border-bottom: 1px solid var(--border);
 }
 
-.project-number {
-    color: #b3d9d4;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+.project-preview:focus-visible {
+    outline-offset: -4px;
 }
 
-.project-wordmark {
-    margin: 16px 0 8px;
-    color: var(--text);
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.05em;
+.project-preview img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.2s ease;
 }
 
-.project-wordmark span {
-    color: var(--accent);
-}
-
-.project-banner-caption {
-    color: #d3e6e1;
-    font-size: 0.85rem;
+.project-preview:hover img {
+    transform: scale(1.03);
 }
 
 .project-content {
@@ -500,11 +482,6 @@ footer a:hover {
         max-width: 230px;
     }
 
-    .project-banner {
-        min-height: 190px;
-        padding: 24px;
-    }
-
     .project-content {
         padding: 24px;
     }
@@ -524,5 +501,9 @@ footer a:hover {
     *::before,
     *::after {
         transition: none;
+    }
+
+    .project-preview:hover img {
+        transform: none;
     }
 }
