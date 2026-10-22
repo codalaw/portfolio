@@ -35,12 +35,6 @@ img {
     max-width: 100%;
 }
 
-button,
-input,
-textarea {
-    font: inherit;
-}
-
 a:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 5px;
@@ -188,13 +182,12 @@ p {
 .intro-visuals {
     display: grid;
     justify-items: center;
-    gap: 24px;
     min-width: 0;
 }
 
 .headshot {
     width: 100%;
-    max-width: 260px;
+    max-width: 300px;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
@@ -244,6 +237,34 @@ p {
 .btn-secondary:hover {
     background-color: var(--surface);
     border-color: var(--accent);
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    align-items: center;
+    gap: 48px;
+}
+
+.about-content {
+    min-width: 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 8px 18px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
 }
 
 .code-card {
@@ -303,31 +324,6 @@ p {
 
 .code-string {
     color: #ff9569;
-}
-
-.about-content {
-    max-width: 70ch;
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 28px 0 0;
-    padding: 0;
-    list-style: none;
-}
-
-.skill-list li {
-    padding: 8px 18px;
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.9rem;
 }
 
 .project-grid {
@@ -431,12 +427,16 @@ footer a:hover {
 
     .intro-visuals {
         width: 100%;
-        max-width: 420px;
         justify-self: center;
     }
 
     h1 {
         font-size: clamp(3rem, 9vw, 4.5rem);
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }
 
