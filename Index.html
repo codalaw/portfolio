@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cody Lawson's portfolio — an aspiring developer learning, building, and growing through practical projects.">
+    <title>Cody Lawson Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a href="#home" class="nav-logo">
+                <img src="images/logo.png" alt="Cody Lawson home">
+            </a>
+
+            <ul>
+                <li><a href="#about" class="nav-btn">About</a></li>
+                <li><a href="#projects" class="nav-btn">Projects</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container">
+        <section id="home" aria-labelledby="home-heading">
+            <div class="intro-content">
+                <p class="section-label">Hello, I'm Cody</p>
+
+                <h1 id="home-heading">
+                    Learning.<br>
+                    Building.<br>
+                    <span>Growing.</span>
+                </h1>
+
+                <p class="intro-description">
+                    An aspiring developer turning curiosity into practical projects.
+                </p>
+
+                <div class="button-group">
+                    <a href="#projects" class="btn btn-primary">
+                        View my projects <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="intro-visuals">
+                <img
+                    src="images/headshot.png"
+                    alt="Cody Lawson"
+                    class="headshot"
+                    width="600"
+                    height="750"
+                >
+
+                <div class="code-card" aria-hidden="true">
+                    <div class="code-card-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>intro.js</span>
+                    </div>
+
+                    <pre><code><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">"Cody Lawson"</span>,
+  learning: [
+    <span class="code-string">"HTML"</span>,
+    <span class="code-string">"CSS"</span>,
+    <span class="code-string">"JavaScript"</span>
+  ],
+  goal: <span class="code-string">"Build useful things"</span>
+};</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <p class="section-label">About</p>
+            <h2 id="about-heading">A little about me</h2>
+
+            <div class="about-content">
+                <p>
+                    I’m a curious, hands-on learner building my programming skills
+                    one project at a time. I enjoy figuring out how things work
+                    and putting what I learn into practice.
+                </p>
+                <p>
+                    Right now, I’m focused on strengthening my foundations,
+                    experimenting with new ideas, and turning what I learn into
+                    projects I can share.
+                </p>
+            </div>
+
+            <ul class="skill-list" aria-label="Skills and tools I am learning">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Vibe Coding</li>
+                <li>Prompt Engineering</li>
+            </ul>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <p class="section-label">Projects</p>
+            <h2 id="projects-heading">Things I've built</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-banner">
+                        <span class="project-number">01 / LANDING PAGE</span>
+                        <p class="project-wordmark">Snack<span>Mate</span></p>
+                        <span class="project-banner-caption">
+                            Discover your next favourite snack.
+                        </span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>SnackMate</h3>
+                        <p>
+                            A responsive landing page for a snack discovery app
+                            concept. The page introduces SnackMate, highlights
+                            its features, and encourages visitors to explore
+                            the app.
+                        </p>
+
+                        <div class="project-links">
+                            <a href="https://codalaw.github.io/SnackMate/" class="project-link">
+                                View live site <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://github.com/codalaw/SnackMate">
+                                View code <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <p class="section-label">Contact</p>
+            <h2 id="contact-heading">Let's connect.</h2>
+            <p>Have a question or want to say hello? You can find me here:</p>
+
+            <div class="button-group">
+                <a href="mailto:Codalaw@gmail.com" class="btn btn-primary">
+                    Email me <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://github.com/codalaw" class="btn btn-secondary">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/codalaw/" class="btn btn-secondary">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Cody Lawson</p>
+            <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
+</body>
+</html>
